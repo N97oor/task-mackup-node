@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/all.css.css">
+
+
+    <title>lipstick-two</title>
+
+ <style>
+      /* 2- GENERAL STYLES........................................................................................ */
+body {
+    font-family: 'varela round' , sans-serif;
+   }
+*  {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+   .container {
+    width:80%;
+    margin: auto;
+    }
+    a {
+       text-decoration: none;
+    }
+    .section-header {
+        text-align: center;   
+    }
+    .section-header .section-title{
+        font-size: 35px;
+        text-transform: capitalize;
+        margin-bottom: 9px;
+        margin-top: 6px;
+    }
+    .section-header .line{
+        display: block;
+        width: 62px;
+        height: 4px;
+        background-color: royalblue;
+       margin: 0  auto  70px  auto;
+    }
+/* 3- SECTIONS.............................................................................................. */
+/* 3.0 HEADER................................................................................................ */
+    .header {
+        width:100%;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(104, 60, 40, 0.781);
+    }
+    .header .logo {
+        width:40%;
+        float: left;
+    }
+    .nav{
+        width:60%;
+        float: left;
+        text-align: right;
+    }
+    .clear{
+        clear: both;
+    }
+    .header .container .header-content .nav > li{
+        list-style: none;
+        display: inline-block;
+    }
+    .header .container .header-content .nav > li > a{
+        color:white;
+        padding:12px;
+        display: block;
+    }
+    .header .container .header-content .nav > li > a:after ,
+    .header .container .header-content .nav  > li > a.active:after{
+        content:"";
+        width:0;
+        height:3px;
+        display: block;
+        background-color: rgba(109, 26, 26, 0.781);
+        margin-top: 2px;
+        transition: .5s;
+    }
+    .header .container .header-content .nav > li > a.active:after{
+     width:100%;
+   }
+    .header .container .header-content .nav > li > a:hover:after{
+        width: 100%;
+    }
+    .dd{
+        position: relative;
+    }
+    .a-bp{
+        color: white;
+        display: block;
+        padding: 10px;
+    }
+    .bp {
+        position: absolute;
+        width: 120px;
+        padding:5px;
+        background-color: rgb(137, 137, 146);
+        text-align: center;
+        left:78%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        }
+        .dd:hover + .bp{
+            visibility: visible;
+            opacity:1;
+        }
+       /* 3.11 FOOTER SECTION....................................................................................... */
+.footer{
+    background-color: #f7f5f2;
+    text-align: center;
+    height: 300px;
+    padding: 60px 0;
+}
+.footer-links{
+    list-style: none;
+    margin: 20px 0;
+}
+.footer-links li{
+    display: inline-block;
+    background-color: rgb(95, 61, 38);
+    width:50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+.footer-links li a{
+    display: block;
+    width:100%;
+    height: 100%;
+    color:#7c5625;
+    color: #fff;
+    line-height: 50px;
+    padding-top:-10px;
+    padding-right: 15px;
+    font-size: 23px;
+    margin: 0 8px;
+}
+.footer-links li:after{
+    position: absolute;
+    content: "";
+    opacity: 0;
+    transition: .3s;
+    background-color: #7c5625;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0%;
+    bottom: 0;
+}
+.footer-links li:hover:after{
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50%;
+}
+.footer p{
+    color:#693636;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* 3.6 NUMBERS SECTION......................................................................................... */
+.numbers {
+    position: relative;
+    background-image: url(/images/background2.jpg);
+    height:800px;
+    background-size: cover;
+    background-attachment:scroll;
+}
+.numbers-items{
+    overflow:hidden;
+    padding-top: 250px;
+}
+.number-item {
+    width: 30%;
+    float: left;
+    text-align:center;
+}
+
+.number-item-title{
+    font-weight: bold;
+    font-size: 35px;
+    color: #fff;
+}
+
+
+
+    /* -------header----------- */
+  .page1-welcome {
+    height: 100vh;
+    background-image: url(../images/menu-back.jpg);
+    background-size: cover;
+    position: relative;
+  }
+  
+  .page1-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .page1-box .page1-header-mid {
+    color: rgb(82, 81, 78);
+    font-size: 50px;
+  }
+  
+  .page1-paragph {
+    color: rgb(60, 59, 61);
+    letter-spacing: 2px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  
+  }
+  
+  .page1-box .btn {
+    width: 150px;
+    padding: 15px 0px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn-start {
+    margin-right: 10px;
+    color: rgb(174, 190, 30);
+    opacity: 0.7;
+  }
+  
+  .btn-learn {
+    background-color: rgb(171, 173, 57);
+    color: white;
+    opacity: 0.7;
+  }
+  
+  .btn:hover {
+    opacity: 0.5;
+  }
+  
+  .page1-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 224, 182);
+    opacity: 0.4;
+  }
+  /*----proudects------  */
+  .page2-div-header {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .page2-h2-header {
+    font-size: 40px;
+  }
+  
+  .page2-line {
+    width: 115px;
+    height: 4px;
+    background-color: rgb(97, 50, 7);
+    margin: auto;
+    margin-bottom: 70px;
+    display: block;
+  }
+  section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  figure img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .parent{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    background-color: rgba(210, 221, 62, 0.856);
+    text-align: center;
+  }
+  button{
+    width: 90px;
+    height: 35px;
+    border: 1px solid rgb(175, 175, 49);
+    background-color: rgb(206, 235, 93);
+    margin: a;
+  }
+
+    </style>
+</head>
+<body>
+   <div >{{>header}}</div>
+<div class="numbers">
+    <div class="overlay">
+        <div class="container">
+            <div class="numbers-items">
+
+            </div> <!-- ./numbers*items -->
+        </div> <!-- ./container -->
+    </div> <!-- ./overlay -->
+</div> <!-- ./numbers -->
+
+
+
+   
+
+    <!-- productes -->
+    <div class="page2-website">
+        <div class="page2-div-header">
+            <h2 class="page2-h2-header">lipstick</h2>
+            <span class="page2-line"></span>
+        </div>
+
+        <section class="list">
+            <figure >
+                <img src="/images/lipglose1-back.jpg" alt="">
+                <p>{{title1}}</p>
+                <p>{{prices1}}</p>
+            </figure>
+
+            <figure >
+                <img src="/images/lipstick2-back.webp" alt="">
+                <p>{{title2}}</p>
+                <p>{{prices2}}</p>
+            </figure>
+            <figure >
+                <img src="/images/lip13.jpg" alt="">
+                <p>{{title3}}</p>
+                <p>{{prices3}}</p>
+            </figure>
+            <figure >
+                <img src="/images/lipglose3-back.jpg" alt="">
+                 <p>{{title4}}</p>
+                <p>{{prices4}}</p>
+            </figure>
+        </section>
+        <section class="list">
+            <figure >
+                <img src="/images/lipglose4-back.jpg" alt="">
+                <p>{{title5}}</p>
+                <p>{{prices5}}</p>
+            </figure>
+            <figure >
+                <img src="/images/lipstick1-for.webp" alt="">
+                <p>{{title6}}</p>
+                <p>{{prices6}}</p>
+            </figure>
+
+            <figure price="20,000">
+                <img src="/images/lipstick2-for.webp" alt="">
+                <p>{{title7}}</p>
+                <p>{{prices7}}</p>
+            </figure>
+            <figure price="30,000">
+                <img src="/images/lipstick1-backr.webp" alt="">
+                 <p>{{title8}}</p>
+                <p>{{prices8}}</p>
+            </figure>
+        </section>
+
+<div>{{>footer}}</div> 
+</body>
+</htm>
